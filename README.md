@@ -7,7 +7,7 @@ An end-to-end Data Engineering pipeline designed to monitor cryptocurrency marke
 ## 🏗️ Project Architecture
 The infrastructure is fully containerized using **Docker**, orchestrated by **Apache Airflow**, and utilizes **PostgreSQL** as the primary data warehouse. It ensures a scalable and isolated environment for data processing.
 
-![High Level Architecture](images\Data_Architecture_Diagram.png)
+![High Level Architecture](images/Data_Architecture_Diagram.png)
 
 ---
 
