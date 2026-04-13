@@ -19,6 +19,15 @@ The infrastructure is fully containerized using **Docker**, orchestrated by **Ap
 * **Visualization:** Power BI (DirectQuery Mode for real-time insights)
 
 ---
+## 🕒 Orchestration (Apache Airflow)
+
+We utilize **Apache Airflow** to orchestrate and monitor the entire pipeline. Our DAGs are designed to manage data ingestion, cleansing, transformation, and analytical processing on an hourly schedule, ensuring real-time data readiness in the warehouse.
+
+The Airflow UI below showcases our active DAGs (`crypto_etl_pipeline_v1`, `crypto_data_transformation_v1`, `crypto_gold_analysis_v1`) running on an `@hourly` schedule with a spotless, all-success status.
+
+![Airflow DAG Status](images/Airflow_Dags.png)
+
+---
 
 ## 📊 Data Flow (Medallion Approach)
 We implement the **Medallion Architecture** to maintain high data quality and lineage:
@@ -28,6 +37,17 @@ We implement the **Medallion Architecture** to maintain high data quality and li
 3.  **Gold Layer:** High-value analytical tables like `gold_fact_signals`, `gold_fact_daily_summary`, and `gold_fact_correlation` for direct consumption by BI tools.
 
 ![Data Flow Diagram](images/Data_Flow_Diagram_(Medallion_Approach).png)
+
+---
+## 📊 Visualization (Power BI)
+
+A real-time **Power BI** dashboard is connected to the Gold layer of the PostgreSQL warehouse using **DirectQuery**. This allows for immediate visualization of price anomalies, daily summaries, and market correlations as soon as they are processed.
+
+![Power BI Dashboard Overview](images/crypto_Page_1.jpg)
+
+---
+
+![Power BI Dashboard Overview](images/crypto_Page_2.jpg)
 
 ---
 
