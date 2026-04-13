@@ -27,7 +27,7 @@ We implement the **Medallion Architecture** to maintain high data quality and li
 2.  **Silver Layer:** Cleansing, handling missing values, and structuring data into the `dim_crypto_prices` dimension table.
 3.  **Gold Layer:** High-value analytical tables like `gold_fact_signals`, `gold_fact_daily_summary`, and `gold_fact_correlation` for direct consumption by BI tools.
 
-![Data Flow Diagram](images/Data_Flow_Diagram_(Medallion_Approach).png)
+![Data Flow Diagram](images/Data Flow Diagram (Medallion Approach).png)
 
 ---
 
