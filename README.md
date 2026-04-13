@@ -7,7 +7,7 @@ An end-to-end Data Engineering pipeline designed to monitor cryptocurrency marke
 ## 🏗️ Project Architecture
 The infrastructure is fully containerized using **Docker**, orchestrated by **Apache Airflow**, and utilizes **PostgreSQL** as the primary data warehouse. It ensures a scalable and isolated environment for data processing.
 
-![High Level Architecture](images/Data_Architecture_Diagram.png)
+![High Level Architecture](images\Data_Architecture_Diagram.png)
 
 ---
 
@@ -27,7 +27,7 @@ We implement the **Medallion Architecture** to maintain high data quality and li
 2.  **Silver Layer:** Cleansing, handling missing values, and structuring data into the `dim_crypto_prices` dimension table.
 3.  **Gold Layer:** High-value analytical tables like `gold_fact_signals`, `gold_fact_daily_summary`, and `gold_fact_correlation` for direct consumption by BI tools.
 
-![Data Flow Diagram](images/Data Flow Diagram (Medallion Approach).png)
+![Data Flow Diagram](images/Data_Flow_Diagram_(Medallion_Approach).png)
 
 ---
 
@@ -37,7 +37,7 @@ The data warehouse is modeled using a **Star Schema** to optimize query performa
 * **Dimension Table:** `dim_crypto_prices` (Unique metadata for each coin).
 * **Fact Tables:** Multiple analytical tables linked via **One-to-Many (1:N)** relationships to the dimension table.
 
-![ERD Diagram](images/ERD Diagram.png)
+![ERD Diagram](images/ERD_Diagram.png)
 
 ---
 
